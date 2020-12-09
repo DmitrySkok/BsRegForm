@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--style-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap" rel="stylesheet">
+    <!--icon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+    <link rel="manifest" href="icon/site.webmanifest">
+    
+
+    <title>SPA</title>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <!-- navigation pills -->
+    <ul class="nav nav-pills" id="product">
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="pill" href="#Title">Title</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="pill" href="#Link1">Link 1</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="pill" href="#Link2">Link 2</a>
+        </li>
+    </ul>
+
+    <!-- Tab panels -->
+    <div class="tab-content">
+        <div class="tab-pane container active text-center title" id="Title">
+            <div>
+                <span class="h3 welcome">WELCOM TO ANGULAR SPA!</span>
+            </div>
+        </div>
+        <div class="tab-pane container fade link1" id="Link1">
+            <div class="text-center divInLink">
+                <form class="form-sign-in">
+                    
+                    <h1 class="h3 mb-2 mt-3 font-weight-normal text-center">User Data</h1>
+                    <div class="mb-4 validateForm">
+                        <div class="col divWithName">
+                            <div class="form-outline mb-1 divUserName">
+                                <input id="firstname" type="text" class="form-control userName field" placeholder="Name" />
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-outline mb-1 divUserSurName">
+                                <input id="surname" type="text" class="form-control userSurName field" placeholder="Surname" />
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-outline divUserAge">
+                                <input id="age" type="text" class="form-control userAge field" placeholder="Age" />
+                            </div>
+                        </div>
+                        <div id="resultBlock" style="display: none;" class="mt-4 result-text">
+                            <span>Hello <span id="showName">{name}</span><span id="showSurname">{surname}</span> !</span>
+                        </div>
+                    </div>
+
+                    <!-- Submit button -->
+                    <button data-to="3" id="savebtn" type="submit" class="btn btn-danger mb-4 validateBtn">
+                        Save
+                    </button>
+                </form>
+
+            </div>
+        </div>
+        <div class="tab-pane container text-center fade" id="Link2">
+            <form class="link2Content">
+                <div id="resultBlockLink2" class="mt-4 resultTextTitle2">
+                    <span><span id="showNameLink2">{name}</span><span id="showSurnameLink2">{surname}</span>’s Page</span>
+                </div>
+                <button id="accessBtn" type="submit" class="btn btn-success mt-4 mb-3 accessBtnLink2">
+                    ACCESS
+                </button>
+                <div style="display: none;" class="grayBox">
+                    
+                </div>
+                <div id="divWithImage" style="display: none;">
+                    <img class="picture" src="https://images.pexels.com/photos/5214472/pexels-photo-5214472.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="photo">
+                </div>
+                <div id="yearsOldBox" style="display: none;" class="mt-4 yearsOldBoxStyle">
+                    You by at least 18 years old !
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+
+    $('button[data-to]').click(function () {
+            setTimeout(()=>{
+                if (!userName.value || !userName.value.match(/\D/g) || !userSurName.value || !userSurName.value.match(/\D/g) || !userAge.value || userAge.value.match(/\D/g)) {
+                return;
+            } else {
+                var selector = '#product li:nth-child(' + $(this).attr('data-to') + ') a';
+                $(selector).tab('show');
+            }
+        }, 3000);  
+    });     
+    </script>
+</body>
+
+</html>

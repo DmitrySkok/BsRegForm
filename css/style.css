@@ -1,0 +1,91 @@
+* {
+    padding: 0.12rem;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'EB Garamond', serif;
+}
+body {
+    background-color: #f8f8f8
+}
+
+.nav-item {
+    font-weight: 700;
+}
+.form-sign-in {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+    background: white;
+    border-radius: 7px;
+    box-shadow: 5px 9px 20px rgba(0, 0, 0, 0.15);
+}
+.link1 {
+    margin-top: 200px;
+}
+.title {
+    margin-top: 250px;
+}
+.welcome{
+    border: solid;
+    border-width: 1px;
+    border-color: #007bff;
+    padding: 5px;
+    color: white;
+    background: #007bff;
+    border-radius: 7px;
+    box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.15);
+}
+.form-label-group {
+    margin-bottom: 0.12rem;
+}
+.result-text{
+    padding: 5px;
+    margin-left: 15px;
+    margin-right: 15px;
+    color: #fff;
+    background-color: #73f59e;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+.resultTextTitle2 {
+    max-width: 300px;
+    padding: 5px;
+    margin: auto;
+    color: #fff;
+    background-color: #28a745;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+.nav {
+    border-radius: 7px;
+    box-shadow: 0px 0px 20px #007bff;
+}
+
+.grayBox {
+    width: 500px;
+    height: 500px;
+    background-color: gray;
+    padding: 15px;
+    margin: auto;
+}
+
+.picture {
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    border-radius: 7px;
+    box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.15);
+}
+.yearsOldBoxStyle {
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+    background-color: #dc3545;
+    border: 1px solid #ced4da00;
+    border-radius: 0.25rem;
+}
+.link2Content {
+    max-width: 600px;
+    margin: auto;
+}
